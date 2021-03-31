@@ -1,2 +1,2 @@
 # BankAccount
-API  server for bnk account transactions
+API  server for bank account transactions
