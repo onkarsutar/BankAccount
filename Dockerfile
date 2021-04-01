@@ -1,9 +1,11 @@
 # Base Image.
-FROM golang:1.16 
+FROM golang:1.16.2-alpine3.13
 
-WORKDIR /usr/app
+WORKDIR /go/src/gitlab.com/onkarsutar/BankAccount
+COPY go.mod ./ go.sum ./
 
-COPY ./ ./ 
+RUN go mod download
+COPY ./ ./
 RUN go build 
 
-CMD ["./main"]
+CMD ["./BankAccount"]

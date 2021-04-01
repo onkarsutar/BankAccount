@@ -4,14 +4,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/onkarsutar/GoSocial/helper/logginghelper"
+	"github.com/onkarsutar/BankAccount/helper/loghelper"
 )
 
 func NewRequest(url, reqType, contentType, token string, data []byte, ClientRequestTimeOut int) (*http.Response, error) {
 
 	req, err := http.NewRequest(reqType, url, nil)
 	if err != nil {
-		logginghelper.LogError("NewRequest Error: ", err)
+		loghelper.LogError("NewRequest Error: ", err)
 		return nil, err
 	}
 
@@ -24,7 +24,7 @@ func NewRequest(url, reqType, contentType, token string, data []byte, ClientRequ
 
 	resp, err := client.Do(req)
 	if err != nil {
-		logginghelper.LogError("NewRequest Error: ", err, req)
+		loghelper.LogError("NewRequest Error: ", err, req)
 		return nil, err
 	}
 	return resp, nil

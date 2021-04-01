@@ -7,7 +7,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gocraft/dbr"
-	"github.com/onkarsutar/GoSocial/helper/confighelper"
+	"github.com/onkarsutar/BankAccount/helper/confighelper"
 )
 
 var sqlConnection *dbr.Connection
