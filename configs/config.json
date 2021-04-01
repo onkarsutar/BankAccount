@@ -1,0 +1,7 @@
+{
+    "apicdnServerPort": "8000",
+    "maxBackupCount": "5",
+    "maxBackupFileSize": "5",
+    "maxAgeForBackupFiles": "5",
+    "jsonDataURL" : "https://git.io/Jm76h"
+}
